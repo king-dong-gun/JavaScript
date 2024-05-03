@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나이 계산</title>
+</head>
+<body>
+<h1 id="wrong">현재 나이 구하기</h1>
+<p id="delete">2024년 현재</p>
+<p id="outputElement"></p> <!-- 결과를 출력할 요소 생성 -->
+<script>
+    const year = prompt("태어난 년도를 입력하세요 (YYYY)", "");
+    // 입력된 년도가 양의 정수이고, 현재년도보다 작거나 같은지 확인
+    if(year > 0 && year <= 2024) {
+        const age = 2024 - year; // 2024년 현재 나이 계산
+        const output = document.getElementById('outputElement'); // outputElement 요소 참조
+        output.innerHTML = `${year}년에 태어난 사람의 나이는 ${age}살 입니다.`; // outputElement 요소의 내용을 업데이트
+    } else {
+        // 잘못된 입력에 대한 처리
+        const output1 = document.getElementById("wrong");
+        output1.innerHTML = "잘못된 입력입니다."; // 제목 변경
+        const output2 = document.getElementById("delete");
+        output2.innerHTML = ""; // 불필요한 텍스트 제거
+    }
+</script>
+</body>
+</html>
