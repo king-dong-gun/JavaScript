@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="veiwport" content="width=devic-width, initial-scale=1.0">
+    <title>innerHTML</title>
+</head>
+<body>
+<div id = "out"></div>
+<script>
+    let outputElement = document.getElementById("out");
+    outputElement.innerHTML = "Hello, JavaScript!!"
+</script>
+</body>
+</html>
+
+<!--
+body 영역: <div id="out"></div>은 ID가 "out"인 div 요소를 생성
+srcript 영역: <script> 요소 내의 자바스크립트는 "out"이라는 ID를 가진 div 요소를 찾고,
+ 그 안에 "Hello, JavaScript!!"라는 텍스트를 설정
+-->

@@ -252,3 +252,250 @@ console.log(symbol1 === symbol2);
 
 - 고유한 하나의 값이므로 같은 문자열이라도 `false`가 반환된다.
 
+#### 출력방법
+1. `console.log()`: 콘솔창에 출력된다.
+2. `document.write()`: 웹페이지 문서에 출력된다
+   - `document.write()` 사용전에 `document.open()`으로 열어주고 실행문이 끝나면 `document.close()`로 닫아준다.
+3. `alert()`: 경고창(알렛창)에 출력된다.
+4. `innerHTML`: 웹페이지에 출력된다.
+
+```js
+let number1 = prompt("첫번째 숫자를 입력하세요");
+let number2 = prompt("두번째 숫자를 입력하세요");
+
+let sum = Number(number1) + Number(number2);
+alert("두 정수의 합은 " + sum + " 입니다.");
+document.writeln("두 정수의 합은 " + sum + " 입니다.");
+```
+
+
+
+- alert 창
+
+![alert3](https://github.com/king-dong-gun/JavaScript_study/assets/160683545/823956b4-5f1d-4177-9f25-565442549a2e)
+
+
+![alert4](https://github.com/king-dong-gun/JavaScript_study/assets/160683545/7dfec7bc-6569-4722-b310-9b7f14f8f774)
+
+
+![alert5](https://github.com/king-dong-gun/JavaScript_study/assets/160683545/f47cc753-8b1c-430c-90ba-1414a02ec424)
+
+
+
+- document 창
+
+![document](https://github.com/king-dong-gun/JavaScript_study/assets/160683545/7b7866ea-cc51-46c9-bdeb-c99059f84db0)
+
+
+
+#### 입력방법
+1. `alert()`: 사용자의 화면에 알림 메시지를 표시된다.
+2. `prompt()`: 사용자가 확인 버튼을 누르면 입력한 값을 반환하고, 취소 버튼을 누르면 `null`을 반환한다
+3. `confirm()`: 확인 및 취소 버튼이 있는 대화 상자를 표시하고, 확인을 누르면 `true`, 취소를 누르면 `false`를 반환한다.
+
+
+```js
+const id = prompt("ID를 입력하세요");
+alert("반갑습니다. " + id + "님!!");
+confirm("입장하시겠습니까?")
+```
+
+- prompt 창
+
+
+![prompt](https://github.com/king-dong-gun/JavaScript_study/assets/160683545/d11f4382-03ef-4010-87c0-85a7747c5aa9)
+
+
+- alert 창
+
+![alert2](https://github.com/king-dong-gun/JavaScript_study/assets/160683545/264f144b-7fb0-4a03-a159-a51fc095d053)
+
+
+- confirm 창
+
+![cofirm](https://github.com/king-dong-gun/JavaScript_study/assets/160683545/4f6f518a-09a1-4794-9aa1-83e87de743ce)
+
+
+#### 연산자
+
+##### 동등 연산자
+
+- 피연산자들의 값만 비교한다.
+- 아래 코드에서 5와 "5"는 타입이 다르지만, `==`는 두 타입을 일치시키기 때문에 결과가 `true`로 반환된다.
+```js
+console.log(5 == "5"); // true
+```
+
+##### 일치 연산자
+
+- 두 값과 타입이 동일한 동일한지 비교한다.
+- 아래 코드에서 5는 숫자이고 "5"는 문자열이기 때문에 `false`를 반환한다. 
+```js
+console.log(5 === "5"); // false
+```
+
+#### 제어문
+- 제어문은 조건에 따라 코드 블록을 실행하거나 반복 실행할 때 사용한다.
+- 일반적으로 코드는 위에서 아래방향으로 순차적으로 실행지만 제어문을 사용하면 코드의 실행 흐름을 인위적으로 제어할 수 있다.
+
+##### 블록문
+- 0개 이상의 문을 중괄호로 묶은 것이다.
+- 블록문은 단독으로 사용할 수도 있으나 일반적으로 제어문이나 함수를 정의할 때 사용하는 것이 일반적이다.
+- 블록문은 문의 종료를 의미하는 자체 종결성을 갖기 때문에 블록문의 끝에는 **세미콜론을 붙이지 않는다**.
+
+```js
+//블록문
+{
+  var foo = 10;
+}
+
+//제어문
+var x = 1;
+if (x < 10) {
+  x++;
+}
+
+//함수 선언문
+function sum(a,b){
+  return a + b;
+}
+```
+
+#### 조건문
+
+##### if ~ else 문
+> if 문의 조건식은 불리언 값으로 평가되어야 한다. 만약 `if` 문의 조건식이 불리언 값이 아닌 값으로 평가되면 자바스크립트 엔진에 의해 암묵적으로 불리언 값으로 강제 변환되어 실행할 코드 블록을 결정한다.
+- 논리적 참 또는 거짓에 따라 실행할 코드 블록을 결정한다.
+- 조건식의 평가 결과가 `true`일 경우 `if` 문의 코드 블록이 실행되고, `false`일 경우 `else` 문의 코드 블록이 실행된다.
+
+```js
+// if 문
+const name = " ";
+if (name === "adam") {
+    console.log("Welcome adam");
+} else if (name === "scott") {
+    console.log("Welcome scott");
+} else {
+    console.log("Who are you?");
+}
+```
+
+
+![if문](https://github.com/king-dong-gun/JavaScript_study/assets/160683545/176dce74-86c2-4351-b0e3-92227ad2812c)
+
+
+
+
+##### switch 문
+> `switch` 문은 논리적 참, 거짓 보다는 다양한 상황(case)에 따라 실행할 코드 블록을 결정할 때 사용한다.
+- `switch` 문은 주어진 표현식을 평가하여 그 값과 일치하는 표현식을 갖는 `case` 문으로 실행 흐름을 옮긴다.
+- `switch` 문의 표현식과 일치하는 `case`문이 없다면 실행순서는 `default` 문으로 이동한다. 
+  - `default`문은 선택사항으로, 사용할 수도 있고 사용하지 않을 수도 있다.
+
+```js
+// switch 문
+const brower = "Chrome";
+switch (brower) {
+    case "IE" :
+        console.log("Microsofr");
+        break;
+    case "FireFox" :
+        console.log("Mozilla");
+        break;
+    case "Chrome" :
+        console.log("Google");
+        break;
+    default :
+        console.log("What...?")
+        break;
+}
+```
+
+
+![switch문](https://github.com/king-dong-gun/JavaScript_study/assets/160683545/bc141e73-87a6-4b3e-aed7-2eccb7a12a98)
+
+
+
+##### while 문
+- `while`문은 주어진 조건식의 평가 결과가 참이면 코드 블록을 계속해서 반복 실행한다.
+  - `for`문은 반복 횟수가 명확할 때 주로 사용하고 `while`문은 반복 횟수가 불명확할 때 주로 사용한다.
+
+```js
+//무한루프 while 문
+while(true){
+    console.log(count);
+    count++;
+    //count가 3이면 코드 블록을 탈출한다.
+    if(count === 3) break;
+} // 0 1 2
+```
+
+![while문](https://github.com/king-dong-gun/JavaScript_study/assets/160683545/745ff5d2-e1a3-464e-acea-0bcf60427d88)
+
+
+#### 문제풀이
+
+1. 구구단을 1단부터 9단까지 출력하세요.
+    - `for`문을 사용해 1 ~ 9까지 반복
+```js
+document.open();
+for (let i = 2; i <= 9; i++) {
+    document.writeln(i + '단');
+    for (let j = 1; j <= 9; j++) {
+        document.writeln(i + ' * ' + j + ' = ' + (i * j) + '<br>');
+    }
+    document.writeln('<br>'); // 단마다 줄바꿈
+}
+document.close();
+```
+
+![forExam](https://github.com/king-dong-gun/JavaScript_study/assets/160683545/d70488a7-a668-42b7-9218-759b7f0c9a26)
+
+
+
+2. 0부터 20까지 4의 배수를 제외한 숫자를 출력하세요.
+    - `for`문과 `if`문, 일치 연산자를 사용
+
+```js
+// 3. 0부터 20까지 4의 배수를 제외한 출력
+document.open();
+for (let i = 0; i <= 20; i++) {
+    if (i % 4 === 0) {
+        continue;
+    }
+    document.writeln(i);
+}
+document.close();
+
+```
+
+![forIfExam](https://github.com/king-dong-gun/JavaScript_study/assets/160683545/5d47cb4a-264f-4844-823d-09fa8f1c524e)
+
+
+
+3. 입력된 숫자만큼 1을 더해 출력하세요.
+    - `if`문과 형변환을 사용
+
+```js
+// 4. 입력된 숫자만큼 1씩 카운터해 출력
+document.open();
+let number = prompt("숫자를 입력하세요");
+
+// 입력된 값이 null이 아니며, 숫자인지 확인
+if (number === null) {
+    document.writeln("값이 없습니다.");
+    // 숫자인지 아닌지 확인
+} else {
+    number = parseInt(number);
+    document.writeln(number + 1);
+}
+document.close();
+```
+
+
+![ifParseExam](https://github.com/king-dong-gun/JavaScript_study/assets/160683545/facae8a6-b785-4e77-8f2f-2837b5bd1d2f)
+
+
+
+![ifParse2](https://github.com/king-dong-gun/JavaScript_study/assets/160683545/846bc64f-9bef-4efc-8ccb-ce7207c46fb2)
+

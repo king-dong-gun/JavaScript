@@ -135,6 +135,7 @@ let str = "javascript";
 let len = str.length;
 console.log(len);
 
+// 자바스크립트는 동적 타입이다.
 let text = "Hello";
 console.log(text.charAt(0));    //  0번째 인덱스 출력
 console.log(`value: ${text}, type: ${typeof text}`);
@@ -147,5 +148,39 @@ console.log(`value: ${text}, type: ${typeof text}`); // 문자 + 숫자는 문�
 let number = 10;
 console.log(`value: ${number}, type: ${typeof number}`);
 
+// null type 버그
 console.log(typeof null); // "object"
 
+// const
+const bird = {species: "kesatrel"};
+console.log(bird);
+bird.species = "Striated Caracara";
+console.log(bird);
+
+console.log(String(30), String(true), String(false));
+console.log(String(null));
+console.log(Number("12345"));
+
+/* 출력방법 */
+// 1. `console.log()`: 콘솔창에 출력된다.
+// 2. `document.write()`: 웹페이지 문서에 출력된다
+// 3. `alert()`: 경고창(알렛창)에 출력된다.
+// 4. `innerHTML`: 웹페이지에 출력된다.
+
+
+/* 입력방법 */
+// 1. `alert()`: 사용자의 화면에 알림 메시지를 표시된다.
+// 2. `prompt()`: 사용자가 확인 버튼을 누르면 입력한 값을 반환하고, 취소 버튼을 누르면 `null`을 반환한다
+// 3. `confirm()`: 확인 및 취소 버튼이 있는 대화 상자를 표시하고, 확인을 누르면 `true`, 취소를 누르면 `false`를 반환한다.
+
+let number1 = prompt("첫번째 숫자를 입력하세요");
+let number2 = prompt("두번째 숫자를 입력하세요");
+
+let sum = Number(number1) + Number(number2);
+alert("두 정수의 합은 " + sum + " 입니다.");
+document.writeln("두 정수의 합은 " + sum + " 입니다.");
+
+
+// const id = prompt("ID를 입력하세요");
+// alert("반갑습니다. " + id + "님!!");
+// confirm("입장하시겠습니까?")

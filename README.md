@@ -15,7 +15,9 @@
 
 ### [day02](https://github.com/king-dong-gun/JavaScript/blob/main/src/md/day02.md)
 
-- 속성 학습
-- 호이스팅 학습
-- 데이터 타입 학습
+- JavaScript 속성 종류
+- 호이스팅 개념
+- 데이터 타입 종류
+- 연산자 종류 및 사용
+- 제어문, 반복문 종류 및 사용
 
