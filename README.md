@@ -12,3 +12,10 @@
   - prompt
   - alert
   - innerHTML
+
+### [day02](https://github.com/king-dong-gun/JavaScript/blob/main/src/md/day02.md)
+
+- 속성 학습
+- 호이스팅 학습
+- 데이터 타입 학습
+
