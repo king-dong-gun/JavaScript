@@ -204,3 +204,24 @@ function printAll(...args) {
 
 
 ![스크린샷 2024-05-08 오후 12 24 44](https://github.com/king-dong-gun/JavaScript_study/assets/160683545/44e94ced-f9bb-4b67-a39c-98ec0bde063d)
+
+
+#### 즉시 실행함수
+- 정의되자마자 즉시 실행되는 함수를 뜻한다.
+- `( () )` 소괄호로 함수를 감싸 사용한다.
+- 파라미터 값을 미리 설정해줘도 되고 `()`안에 값을 줘도 된다.
+
+```js
+// 즉시 실행 함수: 즉시 실행되며 단 한번만 호출되어 다시는 호출할 수 없다.
+let result = (function () {
+    let a = 10;
+    let b = 20;
+    return a + b;
+}());
+console.log(result);
+
+let result2 = (function (a, b) {
+  return a * b;
+}(10, 20));
+console.log(result2);
+```
