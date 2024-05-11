@@ -26,3 +26,5 @@
 1. 배열 함수 종류
 2. 자료구조
 3. 함수 사용법
+
+### [day04](https://github.com/king-dong-gun/JavaScript/blob/main/src/md/day04.md)
