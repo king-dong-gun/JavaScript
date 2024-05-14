@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="veiwport" content="width=devic-width, initial-scale=1.0">
+    <title>자리 배치도</title>
+    <style>
+        table{
+            border: 2px solid black;
+        }
+        td{
+            border: 1px solid black;
+            text-align: center;
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>자리 배치도</h1>
+<script>
+    /*
+    인원 수 줄에 맞게 자리를 배치 하기
+    <조건문>
+    1. 사용자에게 인원수를 입력받기 (현재 인원은 몇명인가요?) - memNum
+    2. 한 줄에 몇명씩 앉을지 입력받기 (한 줄에 몇명씩 앉나요?) - colNum
+    3. 몇 줄이 나올지 조건문을 통해 결과 얻기 - rowNum
+   <반복문>
+    4. for문 구조
+        4-1 줄 수 (rowNum)을 조건으로 하는 바깥 for문
+        4-2 칸 수 (colNum)을 조건으로 하는 이중 for문
+
+    5. 좌석 번호(seatNum)
+
+    <추가>
+    6. 해당 좌석을 table 처리 해주기
+    */
+
+let memNum = parseInt(prompt("입장객은 몇명입니까?"));
+let colNum = parseInt(prompt("한 줄에 몇명씩 앉습니까?"));
+let rowNum = 0;     // 초기값 0 설정
+let seatNum = 1;    // 좌석수를 세야하기 때문에 1 설정
+
+if(memNum%colNum != 0) {    // 홀수 일때
+    rowNum = parseInt(memNum/colNum + 1)    // 나머지 사람이 줄을 차지함
+} else {                    // 짝수 일때
+    rowNum = parseInt(memNum/colNum)        // 줄 그대로
+}
+document.write("<table>");
+for (i = 1; i <= rowNum; i++) {
+    document.write("<tr>")
+
+    for (j = 1; j <=colNum; j++) {
+        document.write("<div>")
+        document.write("<td> 좌석", seatNum, "</td>")
+        document.write("</div>")
+
+        if (seatNum == memNum) {break}
+        seatNum += 1;
+    }
+    document.write("</tr>");
+}
+document.write("</table>");
+</script>
+</body>
+</html>

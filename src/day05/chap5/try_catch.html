@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try_catch</title>
+</head>
+<body>
+<h1>Number Guess</h1>
+<p>1부터 100 사이의 숫자를 입력하세요.</p>
+<input type="text" id="number">
+<button type="button" onclick="guessNum();">숫자 추측</button>
+<p id="msg"></p>
+
+<script>
+    let solution = 7;
+
+    function guessNum() {
+        try {
+            let x = document.getElementById("number").value;
+            console.log(typeof (x));
+            console.log(typeof (solution));
+            if (x < 0) throw "음수는 아닙니다.";
+            if (x > solution) throw "너무 큽니다.";
+            else if (x < solution) throw "너무 작습니다.";
+            else if (x == solution) document.getElementById("msg").innerHTML = "정답입니다!";
+        } catch (err) {
+            let e = document.getElementById("msg")
+            e.innerHTML = "힌트: " + err
+        }
+    }
+
+</script>
+
+</body>
+</html>

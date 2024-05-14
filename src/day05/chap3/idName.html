@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="veiwport" content="width=devic-width, initial-scale=1.0">
+    <title>ElementById</title>
+</head>
+<body>
+<p id="welcome">환영합니다.</p>
+<p id="hello">안녕하세요</p>
+<script>
+    const changeColorRed = (newColor) => {
+        const welcome = document.getElementById("welcome");
+        welcome.style.color = newColor;
+    }
+
+    const changeColorBlue = (newColor) => {
+        const hello = document.getElementById("hello");
+        hello.style.color = newColor
+    }
+</script>
+<button type="button" onclick="changeColorRed('red');">빨강 변신</button>
+<button type="button" onclick="changeColorBlue('blue')">파랑 변신</button>
+</body>
+</html>

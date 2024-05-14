@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="veiwport" content="width=devic-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        #container {
+            width: 200px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+
+    <img src="../../image/ManU.png" id="ManU"/></div>
+
+</body>
+<script>
+    const manU = document.querySelector("#ManU");
+    manU.onclick = changeImg;
+
+    function changeImg() {
+        manU.src = "../../image/ManU2.jpeg"
+    }
+    </script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="veiwport" content="width=devic-width, initial-scale=1.0">
+    <title>innerText innerHTML</title>
+</head>
+<body>
+<button onclick="innertext()">innerText로 표시하기</button>
+<button onclick="innerhtml()">innerHTML로 표시하기</button>
+<h1>현재 시각: </h1>
+<div id="current">
+</div>
+<script>
+let now = new Date();
+function innerText() {
+    document.getElementById("current").innerText = now;
+}
+function innerHtml() {
+    document.getElementById("current").innerHTML = "<em>" + now + "<em>"
+}
+</script>
+</body>
+</html>

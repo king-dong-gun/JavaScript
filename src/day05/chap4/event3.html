@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="veiwport" content="width=devic-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        #container {
+            width: 300px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <img src="../../image/ManU.png" id="ManU"/>
+</div>
+
+<script>
+    const cover = document.getElementById("ManU");
+    cover.addEventListener("mouseover", changeImg);
+    cover.addEventListener("mouseout", originImg)
+
+    function changeImg() {
+        cover.src = "../../image/ManU2.jpeg"
+    }
+
+    function originImg() {
+        cover.src = "../../image/ManU.png"
+    }
+</script>
+</body>
+</html>
