@@ -1,0 +1,107 @@
+:root {
+    --color-black: #3f454d;
+    --color-white: #ffffff;
+    --color-blue: #3b88c3;
+    --color-yellow: #fbbe28;
+    --color-pink: #fd7f84;
+    --color-light-grey: #dfdfdf;
+
+    /*size*/
+    --size-button: 60px;
+
+    /*animation*/
+    --animation-duration: 300ms;
+    --button-font-size: 18px;
+    --base-space: 8px;
+    --size-border: 4px;
+    --size-thumbnail: 50px;
+}
+
+/* 전체 바디 스타일 */
+body {
+    height: 100vh;
+    background-color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 로고 설정 */
+.logo {
+    cursor: pointer;
+    transition: transform var(--animation-duration) ease;
+}
+/* 로고, 버튼 호버 설정 */
+.logo:hover,
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* 버튼 위치 설정 */
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+/* 전체 버튼 설정 */
+.btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: transform var(--animation-duration) ease;
+    margin-right: var(--base-space);
+}
+
+/* 이미지 버튼 설정 */
+.imgBtn {
+    width: var(--size-button);
+    height: var(--size-button);
+}
+/* 칼라 버튼 설정 */
+.colorBtn {
+    font-size: var(--button-font-size);
+    padding: calc(var(--base-space)*2);
+    border-radius: var(--size-border);
+}
+
+.blue {
+    background-color: var(--color-blue);
+}
+
+.yellow {
+    background-color: var(--color-yellow);
+}
+
+.pink {
+    background-color: var(--color-pink);
+}
+
+/* 아이템 리스트들 크기설정 */
+.items {
+    width: 60%;
+    height: 60%;
+    list-style: none;
+    padding-left: 0;
+    overflow-y: auto;
+}
+/* 각 아이템들 크기 위치 설정 */
+.item {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: var(--base-space);
+    margin-bottom: var(--base-space);
+}
+/* 아이템 이미지 크기 설정 */
+.item_thumbnail {
+    width: var(--size-thumbnail);
+    height: var(--size-thumbnail);
+}
+/* 아이템 텍스트 크기 설정 */
+.item_description {
+    margin-left: var(--base-space);
+    font-size: var(--button-font-size);
+}
+
