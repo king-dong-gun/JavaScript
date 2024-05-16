@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="fetch.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<!--"" 안에는 ''로 한다-->
+<input type="button" value="fetch test" onclick=
+        "fetch('https://jsonplaceholder.typicode.com/posts/1')
+        .then(res => console.log(res.json()));">
+
+</body>
+</html>
+
+<!--
+Fetch API: 백엔드와 통신하는 API
+fetch(url, options) return은 promise 타입의 객체
+.then() 메서드는 Promise를 처리할 수 있는 메서드이다.
+post 방식의 경우에는 header에 content-type; charset=utf-8을 필히 작성해야한다.
+-->
