@@ -28,6 +28,23 @@
 3. 함수 사용법
 
 ### [day04](https://github.com/king-dong-gun/JavaScript/blob/main/src/md/day04.md)
-1. `getter`, `setter`
-2. `class`
-3. `static`
+1. JavaScript 기본학습
+  - `getter`, `setter`
+  - `class`
+  - `static`
+
+### [day05](https://github.com/king-dong-gun/JavaScript/blob/main/src/md/day05.md)
+1. JavaScript 기본학습
+   - DOM
+   - 예외처리
+
+### [day06](https://github.com/king-dong-gun/JavaScript/blob/main/src/md/day06.md)
+1. 동기, 비동기의 차이
+2. AJAX 통신 이론
+3. JavaScript 함수
+   - `promise`
+   - `콜백함수`
+4. JSON 사용법
+
+### [day07](https://github.com/king-dong-gun/JavaScript/blob/main/src/md/day07.md)
+1. 온라인 쇼핑몰 만들기
