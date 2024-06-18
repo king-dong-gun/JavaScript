@@ -9,7 +9,7 @@
 ```html
 <script src = "varible.js"></script>
 ```
-##### <head>에 삽입했을 때
+#### head에 삽입했을 때
 
 ````html
 <!DOCTYPE html>
@@ -35,7 +35,7 @@
 - `랜더링`: 이미지 합성은 컴퓨터 프로그램을 사용하여 2D 또는 3D 모델에서 사실적인 이미지 또는 사실적이지 않은 이미지를 생성
 
 
-##### <body>에 삽입했을 때
+#### body에 삽입했을 때
 
 ```html
 <!DOCTYPE html>
