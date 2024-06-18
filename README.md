@@ -9,9 +9,9 @@
   - 타입
   - 함수
 2. JavaScript 출력해보기
-  - prompt
-  - alert
-  - innerHTML
+  - `prompt`
+  - `alert`
+  - `innerHTML`
 
 ### [day02](https://github.com/king-dong-gun/JavaScript/blob/main/src/md/day02.md)
 
@@ -28,3 +28,6 @@
 3. 함수 사용법
 
 ### [day04](https://github.com/king-dong-gun/JavaScript/blob/main/src/md/day04.md)
+1. `getter`, `setter`
+2. `class`
+3. `static`
